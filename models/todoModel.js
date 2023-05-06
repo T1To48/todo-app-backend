@@ -6,8 +6,10 @@ const todoSchema = new mongoose.Schema(
       type: String,
       required: [true, "cannot submit empty task"],
     },
+    
   },
   {
+    timestamps:true,
     versionKey: false,
     toJSON: {
       transform: function (doc, ret) {
