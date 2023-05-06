@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const todoSchema = new mongoose.Schema(
   {
-    todo: {
+    content: {
       type: String,
       required: [true, "cannot submit empty task"],
     },
