@@ -21,10 +21,7 @@ export const getAll=asyncHandler(async(req,res,next)=>{
 
     }
     else{
-        res.status(200).json({
-            success:true,
-            data:allTodos
-        })
+        res.status(200).json(allTodos)
     }
 })
 
