@@ -16,7 +16,7 @@ export const addNew=asyncHandler(async(req,res,next)=>{
 
 export const getAll=asyncHandler(async(req,res,next)=>{
     const allTodos=await Todo.find({});
-    if(!allTodos||allTodos.length>1){
+    if(!allTodos||allTodos.length<1){
        return  next(new Error("Todos list is empty"))
 
     }
