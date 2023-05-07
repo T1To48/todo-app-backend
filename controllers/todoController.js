@@ -24,6 +24,11 @@ export const getAll=asyncHandler(async(req,res,next)=>{
         res.status(200).json(allTodos)
     }
 })
+export const getTodoById=asyncHandler(async(req,res,next)=>{
+    const {todoId}=req.params;
+    const todoItem=await Todo.findById(todoId);
+    if(!todoItem)return next(new Error(`todoItem  with the id ${todoId}, not found!`))
+})
 
 export const editTodo=asyncHandler(async(req,res,next)=>{
     const {todoId}=req.params;
