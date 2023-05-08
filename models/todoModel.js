@@ -6,6 +6,10 @@ const todoSchema = new mongoose.Schema(
       type: String,
       required: [true, "cannot submit empty task"],
     },
+    isDone:{
+      type: Boolean,
+      default:false,
+    }
     
   },
   {
