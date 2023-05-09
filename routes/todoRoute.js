@@ -6,7 +6,7 @@ const router=express.Router()
 
 router.route("/").get(logRequests,getAll).post(logRequests,addNew)
 
-router.route("/:todoId").put(editTodo).get(getTodoById).delete(deleteTodo)
+router.route("/:todoId").put(logRequests,editTodo).get(logRequests,getTodoById).delete(logRequests,deleteTodo)
 
 
 export default router;
