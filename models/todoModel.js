@@ -5,12 +5,7 @@ const todoSchema = new mongoose.Schema(
     content: {
       type: String,
       required: [true, "cannot submit empty task"],
-    },
-    isDone:{
-      type: Boolean,
-      default:false,
     }
-    
   },
   {
     timestamps:true,
