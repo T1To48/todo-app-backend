@@ -1,7 +1,7 @@
 import asyncHandler from "../middlewares/asyncHandler.js"
 import Todo from "../models/todoModel.js"
 
-export const addNew=asyncHandler(async(req,res,next)=>{console.log(req.body)
+export const addNew=asyncHandler(async(req,res,next)=>{
     const newTodo=await Todo.create(req.body);
     if (!newTodo){
        return   next(new Error("failed to add todo to the list"))
