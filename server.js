@@ -19,8 +19,11 @@ if(process.env.NODE_ENV !== "production"){
     app.use(morgan("dev"))
 }
 
-app.get("/",(req,res)=>{
-    res.send("PICKLE RICK")
+app.get("/reviver",(req,res)=>{
+    // res.send("PICKLE RICK")
+    res.status(200).json({
+        success:true
+    })
 })
 
 app.use("/todo-storage/v1",todoRoute);
